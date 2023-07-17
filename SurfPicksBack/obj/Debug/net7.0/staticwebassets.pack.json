@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\3rdpartylicenses.txt",
+      "PackagePath": "staticwebassets\\3rdpartylicenses.txt"
+    },
+    {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.ad7f0feee0ef6c5d.js",
+      "PackagePath": "staticwebassets\\main.ad7f0feee0ef6c5d.js"
+    },
+    {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\polyfills.11cab34efabb9a09.js",
+      "PackagePath": "staticwebassets\\polyfills.11cab34efabb9a09.js"
+    },
+    {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\runtime.c6adfa68428201c2.js",
+      "PackagePath": "staticwebassets\\runtime.c6adfa68428201c2.js"
+    },
+    {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\styles.ef46db3751d8e999.css",
+      "PackagePath": "staticwebassets\\styles.ef46db3751d8e999.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.SurfPicksBack.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.SurfPicksBack.props",
+      "PackagePath": "build\\SurfPicksBack.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.SurfPicksBack.props",
+      "PackagePath": "buildMultiTargeting\\SurfPicksBack.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.SurfPicksBack.props",
+      "PackagePath": "buildTransitive\\SurfPicksBack.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
