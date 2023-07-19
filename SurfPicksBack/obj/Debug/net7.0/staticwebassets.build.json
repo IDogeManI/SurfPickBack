@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tMxJN+gfHMWDDSOSVohyYLC7pVjUAmuwe9Xo48naGwM=",
+  "Hash": "hE29xqkAAzEdpztJs8byXw3Q690W/zS3UFj84Y+8Sxw=",
   "Source": "SurfPicksBack",
   "BasePath": "_content/SurfPicksBack",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\3rdpartylicenses.txt"
+    },
+    {
+      "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\assets\\images\\surf_utopia.jpg",
+      "SourceId": "SurfPicksBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\",
+      "BasePath": "_content/SurfPicksBack",
+      "RelativePath": "assets/images/surf_utopia.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\surf_utopia.jpg"
     },
     {
       "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\favicon.ico",
@@ -68,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.ad7f0feee0ef6c5d.js",
+      "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.1d05851f0f92dea8.js",
       "SourceId": "SurfPicksBack",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\",
       "BasePath": "_content/SurfPicksBack",
-      "RelativePath": "main.ad7f0feee0ef6c5d.js",
+      "RelativePath": "main.1d05851f0f92dea8.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,7 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.ad7f0feee0ef6c5d.js"
+      "OriginalItemSpec": "wwwroot\\main.1d05851f0f92dea8.js"
     },
     {
       "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\polyfills.11cab34efabb9a09.js",
@@ -119,12 +136,12 @@
       "OriginalItemSpec": "wwwroot\\runtime.c6adfa68428201c2.js"
     },
     {
-      "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\styles.ef46db3751d8e999.css",
+      "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\styles.dde097a57dc4204c.css",
       "SourceId": "SurfPicksBack",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\",
       "BasePath": "_content/SurfPicksBack",
-      "RelativePath": "styles.ef46db3751d8e999.css",
+      "RelativePath": "styles.dde097a57dc4204c.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +150,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\styles.ef46db3751d8e999.css"
+      "OriginalItemSpec": "wwwroot\\styles.dde097a57dc4204c.css"
     }
   ]
 }

@@ -33,7 +33,7 @@ namespace SurfPicksBack
                             {
                                 Name = fields[0],
                                 Tier = tier,
-                                ImageSrc = "../assets/images/" + fields[0].ToString(),
+                                ImageSrc = "../assets/images/" + fields[0].ToString() + ".jpg",
                                 Status = SurfMapStatus.None,
                                 Server = mapsTableFile.Contains("Cybershoke") ? "Cybershoke" : mapsTableFile.Contains("KSF") ? "KSF" : ""
                             });
@@ -56,7 +56,7 @@ namespace SurfPicksBack
                 if (!randomList.Contains(number))
                 {
                     randomList.Add(number);
-                    pickedMaps.Add(surfMaps[number]);
+                    pickedMaps.Add(new SurfMapDto() { Name = surfMaps[number].Name, ImageSrc = surfMaps[number].ImageSrc, Server = surfMaps[number].Server, Status = surfMaps[number].Status, Tier = surfMaps[number].Tier });
                 }
             }
             return pickedMaps;

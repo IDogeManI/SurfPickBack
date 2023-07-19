@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\3rdpartylicenses.txt"
     },
     {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\assets\\images\\surf_utopia.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\surf_utopia.jpg"
+    },
+    {
       "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -13,8 +17,8 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.ad7f0feee0ef6c5d.js",
-      "PackagePath": "staticwebassets\\main.ad7f0feee0ef6c5d.js"
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.1d05851f0f92dea8.js",
+      "PackagePath": "staticwebassets\\main.1d05851f0f92dea8.js"
     },
     {
       "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\polyfills.11cab34efabb9a09.js",
@@ -25,8 +29,8 @@
       "PackagePath": "staticwebassets\\runtime.c6adfa68428201c2.js"
     },
     {
-      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\styles.ef46db3751d8e999.css",
-      "PackagePath": "staticwebassets\\styles.ef46db3751d8e999.css"
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\styles.dde097a57dc4204c.css",
+      "PackagePath": "staticwebassets\\styles.dde097a57dc4204c.css"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.SurfPicksBack.Microsoft.AspNetCore.StaticWebAssets.props",
