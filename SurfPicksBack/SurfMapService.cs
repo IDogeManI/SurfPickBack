@@ -43,20 +43,24 @@ namespace SurfPicksBack
             }
         }
 
-        public List<SurfMapDto> GetSurfMaps(Func<SurfMapDto, bool> predicate)
+        public List<SurfMapDto> GetSurfMaps(Func<SurfMapDto, bool> predicate, int countOfMaps)
         {
             List<SurfMapDto> surfMaps = allMaps.Where(predicate).ToList();
             Random random = new Random();
             List<int> randomList = new List<int>();
             List<SurfMapDto> pickedMaps = new List<SurfMapDto>();
             int number = 0;
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < countOfMaps; i++)
             {
                 number = random.Next(0, surfMaps.Count);
                 if (!randomList.Contains(number))
                 {
                     randomList.Add(number);
                     pickedMaps.Add(new SurfMapDto() { Name = surfMaps[number].Name, ImageSrc = surfMaps[number].ImageSrc, Server = surfMaps[number].Server, Status = surfMaps[number].Status, Tier = surfMaps[number].Tier });
+                }
+                else
+                {
+                    i--;
                 }
             }
             return pickedMaps;

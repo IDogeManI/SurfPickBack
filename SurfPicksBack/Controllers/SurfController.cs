@@ -16,12 +16,26 @@ namespace SurfPicksBack.Controllers
 
         }
 
-        [HttpPost("lobby")]
-        public ActionResult<LobbyInfoDto> CreateLobby(PredicateDto predicateDto)
+        [HttpPost("lobby/duel")]
+        public ActionResult<DuelDto> CreateDuel(PredicateDto predicateDto)
         {
             if(predicateDto == null)
                 return BadRequest();
-            return Ok(lobbyService.CreateLobby(x => predicateDto.IsFits(x)));
+            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x),new DuelDto() {Player1=predicateDto.Player1,Player2=predicateDto.Player2 },9));
+        }
+        [HttpPost("lobby/tournamentbo3")]
+        public ActionResult<DuelDto> TournamentBO3(PredicateDto predicateDto)
+        {
+            if (predicateDto == null)
+                return BadRequest();
+            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x), new TournamentDto() { Player1 = predicateDto.Player1, Player2 = predicateDto.Player2 }, 7));
+        }
+        [HttpPost("lobby/tournamentbo5")]
+        public ActionResult<DuelDto> TournamentBO5(PredicateDto predicateDto)
+        {
+            if (predicateDto == null)
+                return BadRequest();
+            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x), new TournamentDto() { Player1 = predicateDto.Player1, Player2 = predicateDto.Player2 }, 11));
         }
         [HttpPatch("lobby")]
         public ActionResult<bool> NextStage(string? lobbyId,string? id, string? mapName)
@@ -31,7 +45,7 @@ namespace SurfPicksBack.Controllers
             return BadRequest();
         }
         [HttpPut("lobby")]
-        public ActionResult<LobbyInfoDto> PingLobby(string? lobbyId)
+        public ActionResult<DuelDto> PingLobby(string? lobbyId)
         {
             if (Guid.TryParse(lobbyId, out Guid lobbyID)) 
                 return Ok(lobbyService.PingLobby(lobbyID));
