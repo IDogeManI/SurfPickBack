@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SurfPicksBack.Models;
 
 namespace SurfPicksBack.Controllers
@@ -9,33 +8,75 @@ namespace SurfPicksBack.Controllers
     public class SurfController : ControllerBase
     {
         private LobbyService lobbyService;
-        public SurfController(LobbyService lobbyService)
+        private SurfMapService mapService;
+        private readonly IWebHostEnvironment appEnvironment;
+        public SurfController(LobbyService lobbyService, IWebHostEnvironment webHostEnvironment, SurfMapService surfMapService)
         {
-
+            appEnvironment = webHostEnvironment;
             this.lobbyService = lobbyService;
+            mapService = surfMapService;    
 
         }
-
+        [HttpGet("map/{imgSrc}")]
+        public ActionResult GetMapImage(string? imgSrc)
+        {
+            if (imgSrc == null)
+                return BadRequest();
+            string filePath = Path.Combine(appEnvironment.ContentRootPath, "Assets/Images/"+ imgSrc);
+            string fileType = "application/jpg";
+            if (System.IO.File.Exists(filePath))
+            {
+                return PhysicalFile(filePath,fileType);
+                
+            }
+            return BadRequest(filePath);
+        }
+        [HttpGet("predicates")]
+        public ActionResult<AvailablePredicatesDto> GetAvailablePredicates()
+        {
+            return Ok(mapService.GetAvailablePredicates());
+        }
         [HttpPost("lobby/duel")]
         public ActionResult<DuelDto> CreateDuel(PredicateDto predicateDto)
         {
             if(predicateDto == null)
                 return BadRequest();
-            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x),new DuelDto() {Player1=predicateDto.Player1,Player2=predicateDto.Player2 },9));
+            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x),new DuelDto() {Player1=predicateDto.Player1,Player2=predicateDto.Player2 ,Predicate = predicateDto},9));
         }
         [HttpPost("lobby/tournamentbo3")]
         public ActionResult<DuelDto> TournamentBO3(PredicateDto predicateDto)
         {
             if (predicateDto == null)
                 return BadRequest();
-            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x), new TournamentDto() { Player1 = predicateDto.Player1, Player2 = predicateDto.Player2 }, 7));
+            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x), new TournamentDto() { Player1 = predicateDto.Player1, Player2 = predicateDto.Player2, Predicate = predicateDto }, 7));
         }
         [HttpPost("lobby/tournamentbo5")]
         public ActionResult<DuelDto> TournamentBO5(PredicateDto predicateDto)
         {
             if (predicateDto == null)
                 return BadRequest();
-            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x), new TournamentDto() { Player1 = predicateDto.Player1, Player2 = predicateDto.Player2 }, 11));
+            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x), new TournamentDto() { Player1 = predicateDto.Player1, Player2 = predicateDto.Player2 , Predicate = predicateDto }, 11));
+        }
+        [HttpPost("lobby/tournamentbo5withoutreroll")]
+        public ActionResult<DuelDto> TournamentBO5WithoutReroll(PredicateDto predicateDto)
+        {
+            if (predicateDto == null)
+                return BadRequest();
+            return Ok(lobbyService.InitLobby(x => predicateDto.IsFits(x), new TournamentDto() { Player1 = predicateDto.Player1, Player2 = predicateDto.Player2, Predicate = predicateDto,Rerollable=false }, 11));
+        }
+        [HttpPost("lobby/reroll")]
+        public ActionResult<bool> VoteForReroll(string? lobbyId, string? id)
+        {
+            if (Guid.TryParse(lobbyId, out Guid lobbyID) && int.TryParse(id, out int userId))
+                return Ok(lobbyService.VoteForReroll(lobbyID, userId));
+            return BadRequest();
+        }
+        [HttpPost("lobby/unreroll")]
+        public ActionResult<bool> VoteForUnreroll(string? lobbyId, string? id)
+        {
+            if (Guid.TryParse(lobbyId, out Guid lobbyID) && int.TryParse(id, out int userId))
+                return Ok(lobbyService.VoteForUnreroll(lobbyID, userId));
+            return BadRequest();
         }
         [HttpPatch("lobby")]
         public ActionResult<bool> NextStage(string? lobbyId,string? id, string? mapName)
