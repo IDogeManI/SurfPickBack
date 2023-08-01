@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hhWL85hmccVXIsDpWWKB1iQWwffl2o9DYve7mIaRry4=",
+  "Hash": "5cbi4Ebkjoq6fPaBxUtfO3J41tZU7MLr64+NmDl6qJg=",
   "Source": "SurfPicksBack",
   "BasePath": "_content/SurfPicksBack",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\3rdpartylicenses.txt"
+    },
+    {
+      "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\assets\\linkIcon.png",
+      "SourceId": "SurfPicksBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\",
+      "BasePath": "_content/SurfPicksBack",
+      "RelativePath": "assets/linkIcon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\linkIcon.png"
     },
     {
       "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\favicon.ico",
@@ -68,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.a71e38971988599a.js",
+      "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.1b74d94db1cd8915.js",
       "SourceId": "SurfPicksBack",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\",
       "BasePath": "_content/SurfPicksBack",
-      "RelativePath": "main.a71e38971988599a.js",
+      "RelativePath": "main.1b74d94db1cd8915.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,7 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.a71e38971988599a.js"
+      "OriginalItemSpec": "wwwroot\\main.1b74d94db1cd8915.js"
     },
     {
       "Identity": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\polyfills.11cab34efabb9a09.js",

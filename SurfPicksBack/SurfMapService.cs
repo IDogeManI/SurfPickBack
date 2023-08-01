@@ -43,7 +43,7 @@ namespace SurfPicksBack
                                     Name = fields[1],
                                     Tier = fields[2],
                                     Style = fields[3],
-                                    ImageSrc = fields[1] + ".jpg",
+                                    ImageSrc = fields[1].Split(' ').ToList()[0] + ".jpg",
                                     Status = SurfMapStatus.None,
                                     Pool = fields[0]
                                 });

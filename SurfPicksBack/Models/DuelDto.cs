@@ -10,7 +10,7 @@
         public List<SurfMapDto> MapsInLobby { get; set; } = new List<SurfMapDto>();
         public LobbyInfoStage Stage { get; set; } = LobbyInfoStage.None;
         public bool Rerollable { get; set; } = true;
-        public DateTime ExpirationDate { get; set; } = DateTime.Now + new TimeSpan(14,0,0,0);
+        public DateTime ExpirationDate { get; set; } = DateTime.Now + new TimeSpan(14, 0, 0, 0);
         public PredicateDto Predicate { get; set; } = new PredicateDto();
 
         public bool VoteForReroll(int id, SurfMapService surfMapService)
@@ -27,6 +27,7 @@
             {
                 var tmp = surfMapService.GetSurfMaps(x => Predicate.IsFits(x), MapsInLobby.Count);
                 MapsInLobby = tmp;
+                countOfStages = 0;
                 return true;
             }
             return false;
@@ -45,12 +46,18 @@
             }
             return false;
         }
+        private int countOfStages = 0;
         public bool NextStage(string mapName, int id)
         {
-            SurfMapDto? pickedMap = this.MapsInLobby.Where(x => x.Status == SurfMapStatus.None).FirstOrDefault(x => x?.Name == mapName, null);
+            SurfMapDto? pickedMap = this.MapsInLobby.Where(x => x.Status == SurfMapStatus.None).FirstOrDefault(x => x?.Name.Replace("\n","") == mapName, null);
             if (pickedMap == null)
-                return false;
-            Rerollable = false;
+                return false; 
+            countOfStages++;
+            if (countOfStages == 2)
+            {
+                Rerollable = false;
+                countOfStages = 0;
+            }
             if (this.Stage == LobbyInfoStage.FirstPlayerPick || this.Stage == LobbyInfoStage.SecondPlayerPick)
                 return NextPickStage(pickedMap, id);
             if (this.Stage == LobbyInfoStage.FirstPlayerBan && id == 1)

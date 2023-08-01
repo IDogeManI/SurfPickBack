@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\3rdpartylicenses.txt"
     },
     {
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\assets\\linkIcon.png",
+      "PackagePath": "staticwebassets\\assets\\linkIcon.png"
+    },
+    {
       "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -13,8 +17,8 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.a71e38971988599a.js",
-      "PackagePath": "staticwebassets\\main.a71e38971988599a.js"
+      "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\main.1b74d94db1cd8915.js",
+      "PackagePath": "staticwebassets\\main.1b74d94db1cd8915.js"
     },
     {
       "Id": "D:\\Solutions\\SurfPicks\\SurfPicksBack\\SurfPicksBack\\wwwroot\\polyfills.11cab34efabb9a09.js",
